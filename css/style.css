@@ -1,0 +1,579 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Balqis';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/balqis.woff2') format('woff2'), url('../fonts/balqis.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/RobotoCondensed-Light.woff2') format('woff2'), url('../fonts/RobotoCondensed-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-LightItalic';
+  font-weight: 300;
+  font-style: italic;
+  src: url('../fonts/RobotoCondensed-LightItalic.woff2') format('woff2'), url('../fonts/RobotoCondensed-LightItalic.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'), url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+body {
+  line-height: 21px;
+  color: #000000;
+  font-family: 'RobotoCondensed-Regular';
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px;
+}
+
+.page-section {
+  margin: 200px auto;
+  max-width: 1920px;
+}
+
+.title {
+  margin-bottom: 100px;
+  line-height: 1.33;
+  color: #E2AB3F;
+  font-family: 'Balqis';
+  font-size: calc(50px + 66 * ((100vw - 320px) / (1230 - 320))); 
+  font-weight: 300;
+}
+
+.title span {
+  display: block;
+  margin-top: calc(-15px + 1 * ((100vw - 320px) / (1230 - 320))); 
+  margin-left: calc(130px + 100 * ((100vw - 320px) / (1230 - 320))); 
+  line-height: 1.17;
+  color: #000000;
+  font-family: 'RobotoCondensed-LightItalic';
+  font-size: calc(14px + 10 * ((100vw - 320px) / (1230 - 320)));
+}
+
+/* header ==============================================================================================================================
+==================================================================================================================== */
+
+.header {
+  height: 100vh;
+  background-image: url('../images/header-bg.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 72px;
+  line-height: 28px;
+  font-size: 24px;
+}
+
+.menu__list-item {
+  display: inline-block;
+}
+
+.menu__list-item+.menu__list-item {
+  margin-left: 52px;
+}
+
+.menu__list-link:hover {
+  text-decoration: underline;
+}
+
+.header__phone {
+  position: relative;
+  padding-left: 40px;
+}
+
+.header__phone::before {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/phone-icon.svg');
+  content: '';
+}
+
+.header__title {
+  position: relative;
+  padding-top: 142px;
+  text-align: center;
+  line-height: 300px;
+  font-family: 'Balqis';
+  font-size: calc(69px + 180 * ((100vw - 320px) / (1230 - 320))); 
+  font-weight: 300;
+}
+
+.header__title span {
+  position: absolute;
+  bottom: -10px;
+  right:0px;
+  text-align: right;
+  line-height: 1.18;
+  font-family: 'RobotoCondensed-LightItalic';
+  font-size: calc(20px + 36 * ((100vw - 320px) / (1230 - 320))); 
+  font-weight: 300;
+}
+
+.fairy-tail__slider {
+  margin-right: auto;
+  width: 50%;
+}
+
+/* section fairy-tail ==============================================================================================================================
+==================================================================================================================== */
+
+.slick-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  width: 70px;
+  height: 70px;
+  background-image: url(../images/arrow-prev.svg);
+  transition: all 0.2s ease;
+}
+
+.slick-prev:hover {
+  background-image: url(../images/arrow-prev-hover.svg);
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-next {
+  width: 70px;
+  height: 70px;
+  background-image: url(../images/arrow-next.svg);
+  transition: all 0.2s ease;
+}
+
+.slick-next:hover {
+  background-image: url(../images/arrow-next-hover.svg);
+}
+
+.fairy-tail__inner {
+  position: relative;
+}
+
+.fairy-tail__container,.our-trip__container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px;
+}
+
+.fairy-tail__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: auto;
+  width: 50%;
+  height: 100%;
+  padding-left: 55px;
+  font-family: 'RobotoCondensed-Light';
+}
+.fairy-tail__text {
+  padding: 10px 0;
+ 
+}
+.fairy-tail__list {
+  font-family: 'RobotoCondensed-Light';
+  
+}
+
+/* section our-trip ==============================================================================================================================
+==================================================================================================================== */
+.our-trip__slider {
+  margin-left: auto;
+  width: 50%;
+}
+.our-trip__inner {
+  position: relative;
+}
+.our-trip__title span {
+  margin-left: 240px;
+}
+.our-trip__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
+  padding: 55px;
+  
+  }
+
+.our-trip__list {
+  margin: 5px 0;
+  line-height: 32px;
+  font-family: 'RobotoCondensed-Light';
+  font-size: 24px;
+ 
+ 
+  
+  
+}
+.our-trip__list li:first-child {
+  margin-bottom: 20px;
+  font-family: 'RobotoCondensed-Regular';
+
+}
+.our-trip__btn {
+  align-self: start;
+  margin-top: 20px;
+  border: 1px solid #E2AB3F;
+  padding: 11px 53px;
+  line-height: 32px;
+  font-size: 24px;
+  
+}
+.our-trip__content {
+  width: 300px;
+  padding-right: 55px;
+ 
+  
+}
+/* section hotel ==============================================================================================================================
+==================================================================================================================== */
+.hotel__title span {
+  margin-left: 120px;
+}
+.hotel__inner {
+  display: flex;
+}
+  
+.hotel__image {
+  margin-right: 100px;
+}
+.hotel__text {
+  margin-bottom: 20px;
+}
+.hotel__box {
+  margin-bottom: 30px;
+}
+.hotel__gallery-link {
+  margin-top: 50px;
+
+  }
+  .hotel__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* section price ==============================================================================================================================
+==================================================================================================================== */
+  .price__inner {
+    display: flex;
+  }
+  .price__on-title,
+  .price__off-title {
+    margin-bottom: 46px;
+    line-height: 32px;
+    font-family: 'RobotoCondensed-Regular';
+    font-size: 24px;
+      }
+  
+  .price__on {
+    margin-right: 70px;
+    max-width: 530px;
+  }
+  .prise__list-item {
+    margin-bottom: 20px;
+  }
+.price {
+  background-image: url(../images/price-bg.png);
+  background-position:  90% center;
+  background-repeat: no-repeat;
+  
+}
+/* section contacts ==============================================================================================================================
+==================================================================================================================== */
+
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.contacts__date,
+.contacts__price {
+  line-height: 69px;
+  color: #E2AB3F;
+  font-family: 'Balqis';
+  font-size: 96px;
+}
+.contacts__date span,
+.contacts__price span {
+  display: block;
+  margin-left: 205px;
+  padding-top: 10px;
+  line-height: 28px;
+  color: #000000;
+  font-family: 'RobotoCondensed-Light';
+  font-size: 24px;
+  font-weight: 300;
+}
+.contacts__date span {
+  font-family: 'RobotoCondensed-LightItalic';
+}
+.contacts__price {
+  margin-left: 120px;
+}
+.contacts__form {
+  margin: 0 auto;
+  max-width: 383px;
+}
+.contacts__form-title {
+  margin-bottom: 50px;
+  line-height: 32px;
+  font-family: 'RobotoCondensed-Regular';
+  font-size: 24px;
+}
+.contacts__form-input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #E2AB3F;
+  padding: 13px 31px;
+  line-height: 24px;
+  font-family: 'RobotoCondensed-Regular';
+  font-size: 18px;
+  font-weight: 300;
+
+}
+.contacts__form-input::placeholder {
+  color: #000;
+}
+.contacts__form-btn {
+  border: 1px solid #E2AB3F;
+  background: transparent;
+  padding: 11px 45px;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 32px;
+  font-family: 'RobotoCondensed-Light';
+  font-size: 24px;
+}
+
+/* footer ==============================================================================================================================
+==================================================================================================================== */
+
+.footer {
+  height: 100vh;
+  background-image: url(../images/footer-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 96px;
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__contacts {
+  width: 356px;
+  height: 527px;
+  background-image: url(../images/footer-contact-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 71px;
+  text-align: center;
+  font-family: 'RobotoCondensed-Light';
+ }
+.footer__text {
+  line-height: 115px;
+  font-family: 'Balqis';
+  font-size: 86px;
+}
+.footer__contacts-title {
+  margin-bottom: 35px;
+  line-height: 115px;
+  color: #E2AB3F;
+  font-family: 'Balqis';
+  font-size: 86px;
+}
+.footer__phone,
+.footer__email {
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: 24px;
+  font-size: 18px;
+  position: relative;
+  padding-left: 40px;
+  
+}
+.footer__phone::before,
+.footer__email::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+.footer__phone::before {
+  background-image: url(../images/footer-phone-icon.svg);
+}
+.footer__email::before {
+  background-image: url(../images/footer-email-icon.svg);
+}
+.footer__social {
+  margin-top: 18px;
+}
+.footer__social-link {
+  margin: 7px;
+  transition: all 0.8s ease;
+}
+.footer__social-link:hover path {
+  fill: #000;
+}
+
+/* media ==============================================================================================================================
+==================================================================================================================== */
+
+@media (max-width: 1240px) {
+  .header__title {
+    
+    line-height: 220px;
+   
+  }
+  .header__title span {
+    
+   
+    line-height: 77px;
+
+  }
+}
+
+@media (max-width: 920px) {
+  .page-section {
+    margin: 100px auto;
+  }
+  .header__top {
+    padding-top: 50px;
+    line-height: 18px;
+    font-size: 18px;
+}
+.header__phone {
+  padding-left: 30px;
+}
+.header__phone::before {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+  .header__title {
+    padding-top: 100px;
+    line-height: 180px;
+    
+  }
+  .header__title span {
+    
+    
+    line-height: 60px;
+
+  }
+  .fairy-tail__container, .our-trip__container {
+    position: static;
+}
+
+.fairy-tail__slider {
+    width: 100%;
+}
+
+.fairy-tail__body {
+    width: 100%;
+    padding-left: 0;
+    flex-wrap: wrap;
+}
+}
+@media (max-width: 600px) {
+  .header__top {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    
+    }
+    .menu {
+      width: 100%;
+      margin: 0 0 25px;
+    }
+    .header__title {
+      padding-top: 80px;
+      line-height: 150px;
+     
+  }
+  
+    .header__title span {
+      
+     
+      line-height: 60px;
+  }
+}
+  @media (max-width: 400px) {
+    .header__title {
+      padding-top: 50px;
+      line-height: 134px;
+      
+  }
+  
+  .header__title {
+      padding-top: 50px;
+      line-height: 134px;
+  }
+  
+  .header__top {
+      font-size: 16px;
+  }
+  }
+  
+  
